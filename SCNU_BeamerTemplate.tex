@@ -1,0 +1,99 @@
+%# -*- coding:utf-8 -*-
+\documentclass[10pt,aspectratio=43,mathserif]{beamer}		
+%设置为 Beamer 文档类型，设置字体为 10pt，长宽比为4:3，数学字体为 serif 风格
+
+%%%%-----导入宏包-----%%%%
+\usepackage{scnu}			%导入 SCNU 模板宏包
+\usepackage{ctex}			%导入 ctex 宏包，添加中文支持
+\usepackage{amsmath,amsfonts,amssymb,bm}   %导入数学公式所需宏包
+\usepackage{color}			 %字体颜色支持
+\usepackage{graphicx,hyperref,url}
+\usepackage{listings}
+\usepackage{metalogo}	% 非必须
+%% 上文引用的包可按实际情况自行增删
+%%%%%%%%%%%%%%%%%%	
+
+
+\beamertemplateballitem		%设置 Beamer 主题
+
+%%%%------------------------%%%%%
+\catcode`\。=\active         %或者=13
+\newcommand{。}{．}				
+%将正文中的“。”号转换为“.”。中文标点国家规范建议科技文献中的句号用圆点替代
+%%%%%%%%%%%%%%%%%%%%%
+
+%%%%----首页信息设置----%%%%
+\title[SCNU Beamer Template]{SCNU Beamer Template}
+\subtitle{————副标题}		
+%%%%----标题设置
+
+
+\author[Elitedj]{
+  Elitedj \\\medskip
+  {\small \url{10000@qq.com}}}
+%%%%----个人信息设置
+
+\institute[IOPP]{
+  华南师范大学\\
+  计算机学院
+}
+%%%%----机构信息
+
+\date[Nov. 11 2020]{
+  2020年11月11日}
+%%%%----日期信息
+  
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}				%生成标题页
+
+
+\section{}
+\begin{frame}
+\frametitle{目录}
+\tableofcontents
+\end{frame}				%生成提纲页
+
+\section{无序列表}
+\begin{frame}
+\frametitle{无序列表测试}
+\begin{itemize}
+	\item {第一点}
+	\item {第二点}
+	\item {第三点}
+	\begin{itemize}
+		\item {第三点第一小点}
+		\item {第三点第二小点}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{图片}
+\begin{frame}
+\frametitle{图片测试}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/my_photo.png}
+	\caption{我的头像}\label{fig1}
+\end{figure}
+\end{frame}
+
+\section{Q\&A}
+\begin{frame}
+\frametitle{Q\&A}
+\begin{center}
+	\textcolor[RGB]{0,45,84}{\Huge Q\&A}
+\end{center}
+\end{frame}
+
+\section{Thanks}
+\begin{frame}
+\frametitle{\quad}
+\begin{center}
+	\textcolor[RGB]{0,45,84}{\Huge Thanks}
+\end{center}
+\end{frame}
+
+\end{document}
